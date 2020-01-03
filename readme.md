@@ -1,5 +1,5 @@
 ## FuzzUnit
-FuzzUnit is a [JUnit 5 value source](https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests-sources)
+FuzzUnit is a [JUnit 5 argument source](https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests-sources)
 intended to be used in parameterized tests. Its purpose is to execute fuzz testing during unit or
 integration testing.
 
@@ -8,7 +8,7 @@ integration testing.
 the development of test-driven development, and is one of a family of unit testing frameworks which
 is collectively known as xUnit that originated with SUnit." *Source: Wikipedia*
 
-FuzzUnit, as a value source of JUnit, brings fuzzing to the unit and integration phase.
+FuzzUnit, as a argument source of JUnit, brings fuzz testing to the unit and integration phase.
 
 ### What is fuzzing?
 According to Wikipedia: "Fuzzing or fuzz testing is an automated software testing technique that
@@ -22,7 +22,7 @@ by security researchers during application security testing (DAST), that is when
 is tested in a preprod environment. However, this is inefficient and time consuming, for several
 reasons:
 * bugs are found late in the SDLC
-* DAST tools are difficult to put in place
+* DAST tools take time to put in place
 * Fuzz testing with DAST tools is not efficient
 
 FuzzUnit brings the power of fuzzing early in the development process, during the unit or integration
@@ -34,14 +34,15 @@ first and most comprehensive open dictionary of fault injection patterns, predic
 locations, and regex for matching server responses. FuzzDB was created to increase the likelihood of
 finding application security vulnerabilities through dynamic application security testing." 
 
-FuzzUnit brings the power of fuzz testing to the unit or integration phase, when developers mostly
-feel responsible for the quality of their software code.
+FuzzUnit allows developers to carry on fuzz testing during the unit or integration phase, when bugs
+are easier to fix.
 
 
 ### Links
-[User Guide](./docs/user-guide.md)
-[Developer Guide](./docs/developer-guide.md)
-[License](./LICENSE.md)
+* [User Guide](./docs/user-guide.md)
+* [Developer Guide](./docs/developer-guide.md)
+* [Release notes](./docs/release-notes.md)
+* [License](./LICENSE.md)
 
-[JUnit 5](https://junit.org/junit5/)
-[FuzzDB](https://github.com/fuzzdb-project/fuzzdb)
+* [JUnit 5](https://junit.org/junit5/)
+* [FuzzDB](https://github.com/fuzzdb-project/fuzzdb)

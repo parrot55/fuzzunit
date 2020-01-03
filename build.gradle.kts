@@ -78,14 +78,13 @@ val generateFuzzEnum by tasks.registering {
 }
 
 tasks.compileJava {
-    dependsOn(generateFuzzEnum)
     dependsOn(tasks.licenseFormat)
 }
 
 class FuzzDbEnumGenerator {
 
-    private val SOURCE_FILEPATH = "src/main/java/org/junit/jupiter/params/provider/FuzzingFile.java"
-    private val TARGET_FILEPATH = "src/main/java/org/junit/jupiter/params/provider/FuzzingFile.java.tmp"
+    private val SOURCE_FILEPATH = "src/main/java/org/junit/jupiter/params/provider/FuzzFile.java"
+    private val TARGET_FILEPATH = "src/main/java/org/junit/jupiter/params/provider/FuzzFile.java.tmp"
 
     fun generateEnum(path: String): Boolean {
         println("Path: " + path)
@@ -158,7 +157,7 @@ class FuzzDbEnumGenerator {
 
         fun mustCopy(line: String): Boolean {
             if (partNumber == 1) {
-                if (line.contains("public enum FuzzingFile")) {
+                if (line.contains("public enum FuzzFile")) {
                     partNumber++
                     mustAppend = true
                 }
